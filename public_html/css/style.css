@@ -2694,6 +2694,31 @@ h2,
   color: #214f59;
 }
 
+.contact-actions {
+  margin-top: 1.1rem;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.82rem 1.15rem;
+  border-radius: 999px;
+  background: rgba(37, 87, 99, 0.1);
+  border: 1px solid rgba(37, 87, 99, 0.18);
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.contact-button:hover {
+  background: rgba(37, 87, 99, 0.16);
+  color: #1d4650;
+  transform: translateY(-1px);
+}
+
 .race-feature .strava-link {
   margin-top: 0.55rem;
   display: inline-flex;

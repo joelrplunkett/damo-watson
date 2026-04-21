@@ -2349,3 +2349,304 @@ header {
     aspect-ratio: 4 / 3;
   }
 }
+
+/* =========================================================
+   2026 LIGHTER REFRESH
+   ========================================================= */
+
+:root {
+  --bg: #eef4f6;
+  --accent: #2f6773;
+  --accent-soft: rgba(47, 103, 115, 0.12);
+  --text-main: #1d2b31;
+  --text-muted: #61727a;
+  --border-subtle: #d3dfe3;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 150, 0.12) 0%, rgba(238, 244, 246, 0) 40%),
+    linear-gradient(180deg, #f5f9fa 0%, #eef4f6 46%, #e8f0f1 100%);
+  color: var(--text-main);
+}
+
+header,
+header.shrink {
+  background: rgba(245, 250, 251, 0.9);
+  border-bottom: 1px solid rgba(211, 223, 227, 0.85);
+  backdrop-filter: blur(14px);
+}
+
+.logo {
+  color: #183038;
+  letter-spacing: 0.12em;
+}
+
+nav a {
+  color: #56666f;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  min-height: 52vh;
+  max-height: none;
+  margin-top: 0;
+  padding: 6.3rem 0 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.hero-bg {
+  background: url("../images/damo-hero.jpg") center 42% / cover no-repeat;
+  filter: brightness(0.98) contrast(1.02) saturate(1.02);
+}
+
+.hero::before,
+.hero::after,
+.hero-bg::after,
+.hero-credit {
+  display: none;
+}
+
+.hero-content {
+  max-width: 34rem;
+  margin-left: clamp(1.2rem, 5vw, 4rem);
+  padding: 1.55rem 1.7rem;
+  background: rgba(250, 252, 252, 0.78);
+  border: 1px solid rgba(211, 223, 227, 0.9);
+  border-radius: 1.4rem;
+  box-shadow: 0 20px 44px rgba(27, 45, 53, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.hero-content h1,
+.hero-content p {
+  text-shadow: none;
+}
+
+.hero-content .kicker {
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.hero-content h1 {
+  max-width: 10ch;
+  color: #14242b;
+  font-size: clamp(2.3rem, 6vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.hero-content p {
+  max-width: 29rem;
+  color: #4f6169;
+  font-size: 1.02rem;
+  margin-bottom: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0;
+}
+
+.hero-actions a {
+  margin: 0;
+  padding: 0.72rem 1rem;
+  border-radius: 999px;
+  background: rgba(47, 103, 115, 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(47, 103, 115, 0.14);
+}
+
+.hero-actions a:hover {
+  color: #214f59;
+  text-decoration: none;
+  background: rgba(47, 103, 115, 0.14);
+}
+
+.page {
+  padding-top: 1.75rem;
+}
+
+h2,
+.about-copy h2,
+.season-marker h2,
+.listen-feature-copy h2,
+.upcoming-note h2,
+.race-feature-content h3,
+#muriwai h2 {
+  color: #15252c;
+}
+
+.muted,
+.quote-attrib,
+.link-card p,
+.upcoming-card-copy,
+.season-marker p,
+.listen-feature-copy p,
+.race-links-note,
+.race-log-meta {
+  color: var(--text-muted);
+}
+
+.about-inner,
+.season-marker,
+.listen-feature,
+.upcoming-note,
+.upcoming-card,
+.race-feature,
+.quote-block,
+.link-card,
+.muriwai-card,
+#contact,
+.race-log-link {
+  background: rgba(251, 253, 253, 0.8);
+  border: 1px solid rgba(211, 223, 227, 0.92);
+  box-shadow: 0 16px 34px rgba(27, 45, 53, 0.08);
+}
+
+.about-inner {
+  padding: 2.1rem 2rem;
+  border-radius: 1.6rem;
+}
+
+.about-inner::before,
+.about-inner::after {
+  display: none;
+}
+
+.about-copy p {
+  color: #44575f;
+  filter: none;
+}
+
+.about-card figcaption {
+  color: #5b6d74;
+}
+
+#races,
+.season-chapter,
+.upcoming-section,
+#why,
+#connect,
+#muriwai,
+#contact {
+  margin-top: 4rem;
+}
+
+#races {
+  padding-top: 0;
+}
+
+.season-rank-label,
+.race-feature .race-meta,
+.upcoming-card-meta,
+.race-subheading,
+.listen-feature-kicker,
+#muriwai .kicker,
+.season-rank-points {
+  color: var(--accent);
+}
+
+.season-marker a,
+.listen-feature-link,
+.listen-feature-ig,
+.listen-feature-meta-link,
+.upcoming-card-link,
+.strava-link,
+.race-stats a {
+  color: var(--accent);
+}
+
+.season-rank-number,
+.season-rank-name,
+.upcoming-card-title,
+.race-log-label,
+.listen-feature-title {
+  color: #182930;
+}
+
+.season-marker-rank,
+.listen-feature-meta {
+  background: rgba(245, 249, 250, 0.92);
+  border: 1px solid rgba(211, 223, 227, 0.95);
+}
+
+.race-feature-image,
+.about-card-media,
+.muriwai-card {
+  box-shadow: none;
+}
+
+.race-feature-image img,
+.about-card-media img,
+.muriwai-card img,
+.race-photo img {
+  filter: brightness(0.96) contrast(1.02) saturate(1.02);
+}
+
+.race-feature-image::after,
+.race-photo::before,
+.muriwai-card::before {
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 24%),
+    linear-gradient(to top, rgba(15, 28, 35, 0.18), rgba(15, 28, 35, 0) 42%);
+}
+
+.race-feature-image::before,
+.muriwai-card::after {
+  color: #f8fbfb;
+}
+
+.link-icon {
+  box-shadow: 0 8px 18px rgba(27, 45, 53, 0.08);
+}
+
+.contact-email a {
+  color: var(--accent);
+}
+
+.contact-email a:hover {
+  color: #214f59;
+}
+
+footer {
+  color: #75858d;
+}
+
+footer span:last-child {
+  color: #41545c;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: auto;
+    padding: 5.4rem 0 1.5rem;
+  }
+
+  .hero-content {
+    margin: 0 1rem;
+    padding: 1.25rem 1.2rem;
+  }
+
+  .hero-content h1 {
+    max-width: 8.5ch;
+    font-size: clamp(2.1rem, 10vw, 3.3rem);
+  }
+
+  .about-inner,
+  .season-marker,
+  .listen-feature,
+  .race-feature,
+  #contact {
+    padding: 1.35rem;
+  }
+}

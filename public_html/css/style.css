@@ -2355,25 +2355,25 @@ header {
    ========================================================= */
 
 :root {
-  --bg: #eef4f6;
-  --accent: #2f6773;
-  --accent-soft: rgba(47, 103, 115, 0.12);
-  --text-main: #1d2b31;
-  --text-muted: #61727a;
-  --border-subtle: #d3dfe3;
+  --bg: #dde6e9;
+  --accent: #255763;
+  --accent-soft: rgba(37, 87, 99, 0.14);
+  --text-main: #152329;
+  --text-muted: #55666e;
+  --border-subtle: #c4d3d8;
 }
 
 body {
   background:
-    radial-gradient(circle at top, rgba(59, 130, 150, 0.12) 0%, rgba(238, 244, 246, 0) 40%),
-    linear-gradient(180deg, #f5f9fa 0%, #eef4f6 46%, #e8f0f1 100%);
+    radial-gradient(circle at top, rgba(37, 87, 99, 0.12) 0%, rgba(221, 230, 233, 0) 40%),
+    linear-gradient(180deg, #edf4f6 0%, #dde6e9 48%, #d4e0e4 100%);
   color: var(--text-main);
 }
 
 header,
 header.shrink {
-  background: rgba(245, 250, 251, 0.9);
-  border-bottom: 1px solid rgba(211, 223, 227, 0.85);
+  background: rgba(233, 241, 243, 0.92);
+  border-bottom: 1px solid rgba(196, 211, 216, 0.88);
   backdrop-filter: blur(14px);
 }
 
@@ -2391,10 +2391,10 @@ nav a:hover {
 }
 
 .hero {
-  min-height: 52vh;
+  min-height: 36rem;
   max-height: none;
   margin-top: 0;
-  padding: 6.3rem 0 2rem;
+  padding: 6rem 0 1.6rem;
   align-items: center;
   justify-content: flex-start;
   text-align: left;
@@ -2402,27 +2402,40 @@ nav a:hover {
 }
 
 .hero-bg {
-  background: url("../images/damo-hero.jpg") center 42% / cover no-repeat;
-  filter: brightness(0.98) contrast(1.02) saturate(1.02);
+  background: url("../images/damo-hero.jpg") center 34% / auto 112% no-repeat;
+  filter: brightness(0.88) contrast(1.06) saturate(1.01);
 }
 
 .hero::before,
-.hero::after,
 .hero-bg::after,
 .hero-credit {
   display: none;
 }
 
+.hero::after {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(233, 241, 243, 0.26) 0%, rgba(233, 241, 243, 0.08) 34%, rgba(233, 241, 243, 0) 58%),
+    linear-gradient(to top, rgba(233, 241, 243, 0.44) 0%, rgba(233, 241, 243, 0.10) 38%, rgba(233, 241, 243, 0) 68%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero-content {
-  max-width: 34rem;
+  max-width: 31rem;
   margin-left: clamp(1.2rem, 5vw, 4rem);
-  padding: 1.55rem 1.7rem;
-  background: rgba(250, 252, 252, 0.78);
-  border: 1px solid rgba(211, 223, 227, 0.9);
+  padding: 1.35rem 1.45rem;
+  background: rgba(246, 250, 251, 0.82);
+  border: 1px solid rgba(196, 211, 216, 0.92);
   border-radius: 1.4rem;
-  box-shadow: 0 20px 44px rgba(27, 45, 53, 0.12);
+  box-shadow: 0 18px 40px rgba(27, 45, 53, 0.14);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content h1,
@@ -2437,15 +2450,15 @@ nav a:hover {
 
 .hero-content h1 {
   max-width: 10ch;
-  color: #14242b;
-  font-size: clamp(2.3rem, 6vw, 4.5rem);
+  color: #102027;
+  font-size: clamp(2.2rem, 5.4vw, 3.9rem);
   line-height: 0.95;
 }
 
 .hero-content p {
-  max-width: 29rem;
-  color: #4f6169;
-  font-size: 1.02rem;
+  max-width: 27rem;
+  color: #44555d;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -2461,15 +2474,15 @@ nav a:hover {
   margin: 0;
   padding: 0.72rem 1rem;
   border-radius: 999px;
-  background: rgba(47, 103, 115, 0.08);
+  background: rgba(37, 87, 99, 0.1);
   color: var(--accent);
-  border: 1px solid rgba(47, 103, 115, 0.14);
+  border: 1px solid rgba(37, 87, 99, 0.16);
 }
 
 .hero-actions a:hover {
-  color: #214f59;
+  color: #1d4650;
   text-decoration: none;
-  background: rgba(47, 103, 115, 0.14);
+  background: rgba(37, 87, 99, 0.16);
 }
 
 .page {
@@ -2508,9 +2521,9 @@ h2,
 .muriwai-card,
 #contact,
 .race-log-link {
-  background: rgba(251, 253, 253, 0.8);
-  border: 1px solid rgba(211, 223, 227, 0.92);
-  box-shadow: 0 16px 34px rgba(27, 45, 53, 0.08);
+  background: rgba(247, 251, 252, 0.76);
+  border: 1px solid rgba(196, 211, 216, 0.94);
+  box-shadow: 0 16px 34px rgba(20, 34, 40, 0.09);
 }
 
 .about-inner {
@@ -2524,7 +2537,7 @@ h2,
 }
 
 .about-copy p {
-  color: #44575f;
+  color: #33464d;
   filter: none;
 }
 
@@ -2571,13 +2584,13 @@ h2,
 .upcoming-card-title,
 .race-log-label,
 .listen-feature-title {
-  color: #182930;
+  color: #112128;
 }
 
 .season-marker-rank,
 .listen-feature-meta {
-  background: rgba(245, 249, 250, 0.92);
-  border: 1px solid rgba(211, 223, 227, 0.95);
+  background: rgba(240, 246, 247, 0.9);
+  border: 1px solid rgba(196, 211, 216, 0.96);
 }
 
 .race-feature-image,
@@ -2590,7 +2603,7 @@ h2,
 .about-card-media img,
 .muriwai-card img,
 .race-photo img {
-  filter: brightness(0.96) contrast(1.02) saturate(1.02);
+  filter: brightness(0.92) contrast(1.04) saturate(1.02);
 }
 
 .race-feature-image::after,
@@ -2629,17 +2642,17 @@ footer span:last-child {
 @media (max-width: 720px) {
   .hero {
     min-height: auto;
-    padding: 5.4rem 0 1.5rem;
+    padding: 5rem 0 1.2rem;
   }
 
   .hero-content {
     margin: 0 1rem;
-    padding: 1.25rem 1.2rem;
+    padding: 1.15rem 1.1rem;
   }
 
   .hero-content h1 {
     max-width: 8.5ch;
-    font-size: clamp(2.1rem, 10vw, 3.3rem);
+    font-size: clamp(2rem, 10vw, 3rem);
   }
 
   .about-inner,

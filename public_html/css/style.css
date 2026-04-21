@@ -2391,51 +2391,37 @@ nav a:hover {
 }
 
 .hero {
-  min-height: 31rem;
-  max-height: none;
+  background:
+    linear-gradient(180deg, rgba(227, 236, 240, 0.9) 0%, rgba(221, 230, 233, 0.84) 100%);
+  min-height: auto;
   margin-top: 0;
-  padding: 5.6rem 0 1.35rem;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: left;
+  padding: 5.8rem 0 1.4rem;
   border-radius: 0 0 2rem 2rem;
 }
 
-.hero-bg {
-  background: url("../images/damo-hero.jpg") center 30% / auto 98% no-repeat;
-  filter: brightness(0.84) contrast(1.08) saturate(1.02);
-}
-
 .hero::before,
-.hero-bg::after,
+.hero::after,
 .hero-credit {
   display: none;
 }
 
-.hero::after {
-  display: block;
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, rgba(216, 227, 231, 0.36) 0%, rgba(216, 227, 231, 0.10) 34%, rgba(216, 227, 231, 0) 58%),
-    linear-gradient(to top, rgba(216, 227, 231, 0.56) 0%, rgba(216, 227, 231, 0.14) 38%, rgba(216, 227, 231, 0) 68%);
-  pointer-events: none;
-  z-index: 1;
+.hero-shell {
+  width: min(1180px, calc(100% - 2.4rem));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.88fr);
+  gap: 1.6rem;
+  align-items: center;
 }
 
 .hero-content {
-  max-width: 31rem;
-  margin-left: clamp(1.2rem, 5vw, 4rem);
-  padding: 1.25rem 1.35rem;
-  background: rgba(241, 247, 249, 0.88);
+  max-width: none;
+  margin-left: 0;
+  padding: 1.7rem 1.7rem;
+  background: rgba(243, 248, 250, 0.96);
   border: 1px solid rgba(182, 199, 205, 0.96);
   border-radius: 1.4rem;
   box-shadow: 0 18px 40px rgba(18, 32, 38, 0.16);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  position: relative;
-  z-index: 2;
 }
 
 .hero-content h1,
@@ -2449,14 +2435,14 @@ nav a:hover {
 }
 
 .hero-content h1 {
-  max-width: 10ch;
+  max-width: 8ch;
   color: #102027;
-  font-size: clamp(2.2rem, 5.4vw, 3.9rem);
-  line-height: 0.95;
+  font-size: clamp(2.35rem, 5vw, 4.2rem);
+  line-height: 0.92;
 }
 
 .hero-content p {
-  max-width: 27rem;
+  max-width: 30rem;
   color: #44555d;
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -2483,6 +2469,25 @@ nav a:hover {
   color: #1d4650;
   text-decoration: none;
   background: rgba(37, 87, 99, 0.16);
+}
+
+.hero-photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(182, 199, 205, 0.96);
+  box-shadow: 0 18px 40px rgba(18, 32, 38, 0.14);
+  background: #d7e1e5;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+  display: block;
+  filter: brightness(0.88) contrast(1.06) saturate(1.02);
 }
 
 .page {
@@ -2720,18 +2725,26 @@ footer span:last-child {
 
 @media (max-width: 720px) {
   .hero {
-    min-height: auto;
-    padding: 4.9rem 0 1.1rem;
+    padding: 4.8rem 0 1rem;
+  }
+
+  .hero-shell {
+    width: min(100%, calc(100% - 1.4rem));
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .hero-content {
-    margin: 0 1rem;
-    padding: 1.15rem 1.1rem;
+    padding: 1.2rem 1.1rem;
   }
 
   .hero-content h1 {
     max-width: 8.5ch;
     font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .hero-photo {
+    aspect-ratio: 5 / 4;
   }
 
   .about-inner,

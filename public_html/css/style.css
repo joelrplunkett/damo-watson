@@ -2391,10 +2391,10 @@ nav a:hover {
 }
 
 .hero {
-  min-height: 36rem;
+  min-height: 31rem;
   max-height: none;
   margin-top: 0;
-  padding: 6rem 0 1.6rem;
+  padding: 5.6rem 0 1.35rem;
   align-items: center;
   justify-content: flex-start;
   text-align: left;
@@ -2402,8 +2402,8 @@ nav a:hover {
 }
 
 .hero-bg {
-  background: url("../images/damo-hero.jpg") center 34% / auto 112% no-repeat;
-  filter: brightness(0.88) contrast(1.06) saturate(1.01);
+  background: url("../images/damo-hero.jpg") center 30% / auto 98% no-repeat;
+  filter: brightness(0.84) contrast(1.08) saturate(1.02);
 }
 
 .hero::before,
@@ -2418,8 +2418,8 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(233, 241, 243, 0.26) 0%, rgba(233, 241, 243, 0.08) 34%, rgba(233, 241, 243, 0) 58%),
-    linear-gradient(to top, rgba(233, 241, 243, 0.44) 0%, rgba(233, 241, 243, 0.10) 38%, rgba(233, 241, 243, 0) 68%);
+    linear-gradient(to right, rgba(216, 227, 231, 0.36) 0%, rgba(216, 227, 231, 0.10) 34%, rgba(216, 227, 231, 0) 58%),
+    linear-gradient(to top, rgba(216, 227, 231, 0.56) 0%, rgba(216, 227, 231, 0.14) 38%, rgba(216, 227, 231, 0) 68%);
   pointer-events: none;
   z-index: 1;
 }
@@ -2427,11 +2427,11 @@ nav a:hover {
 .hero-content {
   max-width: 31rem;
   margin-left: clamp(1.2rem, 5vw, 4rem);
-  padding: 1.35rem 1.45rem;
-  background: rgba(246, 250, 251, 0.82);
-  border: 1px solid rgba(196, 211, 216, 0.92);
+  padding: 1.25rem 1.35rem;
+  background: rgba(241, 247, 249, 0.88);
+  border: 1px solid rgba(182, 199, 205, 0.96);
   border-radius: 1.4rem;
-  box-shadow: 0 18px 40px rgba(27, 45, 53, 0.14);
+  box-shadow: 0 18px 40px rgba(18, 32, 38, 0.16);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   position: relative;
@@ -2521,9 +2521,9 @@ h2,
 .muriwai-card,
 #contact,
 .race-log-link {
-  background: rgba(247, 251, 252, 0.76);
-  border: 1px solid rgba(196, 211, 216, 0.94);
-  box-shadow: 0 16px 34px rgba(20, 34, 40, 0.09);
+  background: rgba(239, 246, 248, 0.9);
+  border: 1px solid rgba(188, 204, 210, 0.98);
+  box-shadow: 0 16px 34px rgba(20, 34, 40, 0.1);
 }
 
 .about-inner {
@@ -2538,6 +2538,11 @@ h2,
 
 .about-copy p {
   color: #33464d;
+  filter: none;
+}
+
+.about-copy h2 {
+  text-shadow: none;
   filter: none;
 }
 
@@ -2593,6 +2598,59 @@ h2,
   border: 1px solid rgba(196, 211, 216, 0.96);
 }
 
+.season-marker p,
+.listen-feature-copy p,
+.upcoming-note p,
+.upcoming-card-copy,
+.race-links-note,
+.race-log-meta,
+.link-card p,
+.quote-text,
+.quote-attrib {
+  color: #44575e;
+}
+
+.season-marker-copy,
+.listen-feature-copy,
+.upcoming-note,
+.upcoming-card,
+.race-feature-content,
+.race-log-link,
+#contact {
+  color: #1a2a30;
+}
+
+.race-feature .race-meta,
+.season-rank-label,
+.season-rank-points,
+.upcoming-card-meta,
+.listen-feature-kicker,
+.race-subheading,
+#muriwai .kicker {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.race-feature .race-stats,
+.race-feature .race-stats li {
+  color: #24343b;
+}
+
+.race-feature .race-stats li::before {
+  color: var(--accent);
+}
+
+.race-feature-content h3,
+.season-marker h2,
+.listen-feature-copy h2,
+.upcoming-note h2,
+.race-log-label,
+.listen-feature-title,
+.season-rank-number,
+.season-rank-name {
+  color: #112128;
+}
+
 .race-feature-image,
 .about-card-media,
 .muriwai-card {
@@ -2631,6 +2689,27 @@ h2,
   color: #214f59;
 }
 
+.race-feature .strava-link {
+  margin-top: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(37, 87, 99, 0.1);
+  border: 1px solid rgba(37, 87, 99, 0.16);
+  color: var(--accent);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.race-feature .strava-link:hover {
+  color: #1d4650;
+  background: rgba(37, 87, 99, 0.16);
+  text-decoration: none;
+}
+
 footer {
   color: #75858d;
 }
@@ -2642,7 +2721,7 @@ footer span:last-child {
 @media (max-width: 720px) {
   .hero {
     min-height: auto;
-    padding: 5rem 0 1.2rem;
+    padding: 4.9rem 0 1.1rem;
   }
 
   .hero-content {
